@@ -1,4 +1,6 @@
-@Library('shared') import static org.foo.*
+@Library('shared') import org.foo.GlobalVars
+@Library('shared') import org.foo.utils
+def utils = new utils()
 
 pipeline {
   agent any
@@ -7,7 +9,7 @@ pipeline {
       steps {
         script {
           echo GlobalVars.foo
-          mvn()
+          utils.mvn()
         }
       }
     }
