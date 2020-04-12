@@ -1,4 +1,4 @@
-@Library('shared') import static src.org.foo.Utilities.*
+@Library('shared') import org.foo.Utilities.*
 node {
   mvn this, 'clean package'
 }
