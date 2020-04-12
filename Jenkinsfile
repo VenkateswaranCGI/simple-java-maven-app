@@ -1,6 +1,6 @@
 @Library('shared') import org.foo.Utilities.*
 node {
-  mvn this, 'clean package'
+  mvnbuild this, 'clean package'
 }
 
 //@Library('shared') _
