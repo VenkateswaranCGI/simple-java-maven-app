@@ -1,14 +1,14 @@
 jsl = library(
-  identifier: "jenkins-shared-library@master",
+  identifier: "jenkins-pipeline-shared@master",
   retriever: modernSCM(
     [
       $class: 'GitSCMSource',
-      remote: 'https://github.com/hoto/jenkins-shared-library.git'
+      remote: 'https://github.com/VenkateswaranCGI/jenkins-pipeline-shared.git'
     ]
   )
 )
 
-build = jsl.com.mycompany.jenkins.Build.new(this)
+build = jsl.org.foo.utils.new(this)
 
 pipeline {
   agent any
@@ -16,10 +16,7 @@ pipeline {
     stage('Init') {
       steps {
         script {
-          build.setBuildDescription(
-            message: "test",
-            description: "test"
-          )
+          build.mvn()
         }
       }
     }
