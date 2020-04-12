@@ -2,8 +2,15 @@
 
 build = org.foo.utils.mvn.new(this)
 
-node {
-  build.mvn(this, 'clean package')
+pipeline{
+  agent any
+  stages {
+  stage("Maven Build"){
+        steps{
+            build.mvn(this, 'clean package')
+        }
+  }
+  }
 }
 
 //@Library('shared') _
