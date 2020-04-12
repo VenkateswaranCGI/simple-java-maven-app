@@ -17,8 +17,8 @@ pipeline {
       steps {
         script {
           build.setBuildDescription(
-            message: COMMIT_MESSAGE,
-            description: COMMIT_AUTHOR
+            message: "test",
+            description: "test"
           )
         }
       }
