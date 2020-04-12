@@ -1,9 +1,6 @@
 @Library('shared') import org.foo.Utilities
-  
 def utils = new Utilities(this)
-  
 node {
-  mvnbuild this, 'clean package'
   utils.mvnbuild 'clean package'
 }
 
