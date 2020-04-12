@@ -1,0 +1,32 @@
+@Library('shared') import com.org.jenkins.stages.Build
+def build = new Build()
+
+pipeline {
+  agent any
+  stages {
+    stage('Build') {
+      steps {
+        script {
+          //echo GlobalVars.foo
+          build.mvnbuild(Build)
+        }
+      }
+    }
+    stage('Code Analysis') {
+      steps {
+        script {
+          //echo GlobalVars.foo
+          build.mvnbuild(Build)
+        }
+      }
+    }
+    stage('Publish') {
+      steps {
+        script {
+          //echo GlobalVars.foo
+          build.mvnbuild(Build)
+        }
+      }
+    }
+  }
+}
