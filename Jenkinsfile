@@ -1,5 +1,12 @@
+  
 jsl = library(
-  identifier: "shared"
+  identifier: "shared",
+  retriever: modernSCM(
+    [
+      $class: 'GitSCMSource',
+      remote: 'https://github.com/VenkateswaranCGI/jenkins-pipeline-shared.git'
+    ]
+  )
 )
 //@Library('shared') _
 
