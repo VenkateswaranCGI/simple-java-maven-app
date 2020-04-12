@@ -8,8 +8,7 @@ jsl = library(
   )
 )
 
-utils utils = new jsl.org.foo.utils()
-
+import com.cleverbuilder.GlobalVars
 
 pipeline {
   agent any
@@ -17,7 +16,7 @@ pipeline {
     stage('Init') {
       steps {
         script {
-          build.mvn()
+          echo GlobalVars.foo
         }
       }
     }
