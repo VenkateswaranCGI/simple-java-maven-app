@@ -8,7 +8,7 @@ pipeline {
       steps {
         script {
           //echo GlobalVars.foo
-          build.mvnbuild(Build)
+          build.mvnbuild(this)
         }
       }
     }
@@ -16,7 +16,7 @@ pipeline {
       steps {
         script {
           echo 'Code analysis'
-          //build.mvnbuild(Build)
+          //build.sonaranalysis(this)
         }
       }
     }
@@ -24,7 +24,7 @@ pipeline {
       steps {
         script {
           echo 'Publish'
-          //build.mvnbuild(Build)
+          //build.mvnbuild(this)
         }
       }
     }
