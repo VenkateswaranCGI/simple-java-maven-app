@@ -16,7 +16,7 @@ pipeline {
       steps {
         script {
           echo 'Code analysis'
-          build.sonaranalysis(this)
+          //build.sonaranalysis(this)
         }
       }
     }
@@ -24,7 +24,7 @@ pipeline {
       steps {
         script {
           echo 'Publish'
-          build.publishfile(this)
+          //build.publishfile(this)
         }
       }
     }
