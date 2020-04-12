@@ -8,7 +8,7 @@ jsl = library(
   )
 )
 
-build = jsl.org.foo.utils.new(this)
+build = jsl.org.foo.utils()
 
 pipeline {
   agent any
