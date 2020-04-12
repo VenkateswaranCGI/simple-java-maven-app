@@ -15,16 +15,16 @@ pipeline {
     stage('Code Analysis') {
       steps {
         script {
-          //echo GlobalVars.foo
-          build.mvnbuild(Build)
+          echo 'Code analysis'
+          //build.mvnbuild(Build)
         }
       }
     }
     stage('Publish') {
       steps {
         script {
-          //echo GlobalVars.foo
-          build.mvnbuild(Build)
+          echo 'Publish'
+          //build.mvnbuild(Build)
         }
       }
     }
