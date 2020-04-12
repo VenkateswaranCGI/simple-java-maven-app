@@ -1,4 +1,4 @@
-@Library('shared') import org.foo.GlobalVars
+//@Library('shared') import org.foo.GlobalVars
 @Library('shared') import org.foo.utils
 def utils = new utils()
 
@@ -8,7 +8,7 @@ pipeline {
     stage('Init') {
       steps {
         script {
-          echo GlobalVars.foo
+          //echo GlobalVars.foo
           utils.mvn()
         }
       }
