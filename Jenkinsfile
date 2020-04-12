@@ -1,6 +1,6 @@
 @Library('shared') _
 
-build = org.foo.utils.mvn.new(this)
+//build = org.foo.utils.mvn.new(this)
 
 pipeline{
   agent any
