@@ -8,7 +8,7 @@ pipeline{
   stage("Maven Build"){
         steps{
           script {
-            ehco "hello"
+            echo "hello"
             //build.mvn(this, 'clean package')
           }
         }
