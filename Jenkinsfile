@@ -8,7 +8,7 @@ jsl = library(
   )
 )
 
-import com.cleverbuilder.GlobalVars
+import org.foo.GlobalVars
 
 pipeline {
   agent any
