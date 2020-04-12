@@ -1,6 +1,5 @@
-  
 jsl = library(
-  identifier: "shared",
+  identifier: "shared@master",
   retriever: modernSCM(
     [
       $class: 'GitSCMSource',
