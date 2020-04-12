@@ -1,6 +1,9 @@
-@Library('shared') _
+jsl = library(
+  identifier: "shared"
+)
+//@Library('shared') _
 
-build = org.foo.utils.new(this)
+build = js1.org.foo.utils.new(this)
 
 pipeline{
   agent any
