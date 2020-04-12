@@ -6,11 +6,10 @@ pipeline{
   agent any
   stages {
   stage("Maven Build"){
-        steps{
-          script {
-            echo "hello"
-            //build.mvn(this, 'clean package')
-          }
+        steps {
+        script {
+          echo 'Stage 2'
+        }
         }
   }
   }
