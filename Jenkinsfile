@@ -9,7 +9,7 @@ pipeline {
       steps {
         script {
           //echo GlobalVars.foo
-          utils.mvn()
+          utils.mvn(this)
         }
       }
     }
