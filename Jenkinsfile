@@ -1,6 +1,9 @@
-@Library('shared') import org.foo.utils.*
+@Library('shared') _
+
+build = org.foo.utils.mvn.new(this)
+
 node {
-  mvn this, 'clean package'
+  build.mvn(this, 'clean package')
 }
 
 //@Library('shared') _
