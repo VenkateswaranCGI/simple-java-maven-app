@@ -1,5 +1,7 @@
 @Library('shared') import com.org.jenkins.stages.*
 def build = new Build()
+def analysis = new Analysis()
+def publish = new Publish()
 
 pipeline {
   agent any
@@ -8,6 +10,7 @@ pipeline {
       steps {
         script {
           //echo GlobalVars.foo
+          echo 'Build'
           build.mvnbuild(this)
         }
       }
@@ -16,7 +19,7 @@ pipeline {
       steps {
         script {
           echo 'Code analysis'
-          //build.sonaranalysis(this)
+          analysis.sonaranalysis(this)
         }
       }
     }
@@ -24,7 +27,7 @@ pipeline {
       steps {
         script {
           echo 'Publish'
-          //build.publishfile(this)
+          publish.publishfile(this)
         }
       }
     }
