@@ -1,4 +1,4 @@
-@Library('shared') import com.org.jenkins.stages.Build
+@Library('shared') import com.org.jenkins.stages.*
 def build = new Build()
 
 pipeline {
