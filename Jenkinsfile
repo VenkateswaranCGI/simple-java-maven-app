@@ -1,4 +1,4 @@
-@Library('shared') import org.foo.Utilities.*
+@Library('shared') import org.foo.Utilities
   
 def utils = new Utilities(this)
   
