@@ -7,7 +7,9 @@ pipeline{
   stages {
   stage("Maven Build"){
         steps{
+          script {
             build.mvn(this, 'clean package')
+          }
         }
   }
   }
