@@ -1,4 +1,4 @@
-@Library('shared') import org.foo.*
+@Library('shared') import static org.foo.*
 
 pipeline {
   agent any
