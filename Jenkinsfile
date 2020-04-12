@@ -1,5 +1,5 @@
 jsl = library(
-  identifier: "jenkins-shared-library@${env.BRANCH_NAME}",
+  identifier: "jenkins-shared-library@master",
   retriever: modernSCM(
     [
       $class: 'GitSCMSource',
